@@ -1,5 +1,6 @@
 package com.example.guidedlab
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -38,7 +39,9 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 else -> {
-                    Toast.makeText(applicationContext, "Success", Toast.LENGTH_LONG).show()
+                    Toast.makeText(applicationContext, "Login Successful", Toast.LENGTH_LONG).show()
+                    var intent = Intent(this,MainClassList::class.java)
+                    startActivity(intent)
                 }
             }
         }
